@@ -1,4 +1,4 @@
-module xml-sender
+module cli-mail-sender
 
 go 1.27.0
 
