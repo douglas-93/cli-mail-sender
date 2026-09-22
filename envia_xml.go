@@ -243,7 +243,7 @@ func main() {
 		m.SetHeader("From", cfg.From)
 		m.SetHeader("To", cfg.To)
 		m.SetHeader("Subject", fmt.Sprintf("%s%s", cfg.Subject, fileName))
-		m.SetBody("text/plain", fmt.Sprintf("Segue arquivo: %s\nEnviado em %s\nPasta: %s", fileName, time.Now().Format("02/01/2006 15:04:05"), pastaUsada))
+		m.SetBody("text/plain", fmt.Sprintf("Segue arquivo: %s\nEnviado em %s", fileName, time.Now().Format("02/01/2006 15:04:05")))
 		m.Attach(filePath)
 
 		if err := dialer.DialAndSend(m); err != nil {
